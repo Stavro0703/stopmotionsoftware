@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwidgets.org/wxxrc" version="2.5.3.0">
+	<object class="wxFrame" name="MainFrame">
+		<style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+		<pos>100,100</pos>
+		<size>1200,800</size>
+		<title>Canadian Experience</title>
+		<aui_managed>0</aui_managed>
+		<object class="wxMenuBar" name="MenuBar">
+			<object class="wxMenu" name="FileMenu">
+				<label>_File</label>
+				<object class="wxMenuItem" name="wxID_OPEN">
+					<label>Open Animation _File...\tCtrl-F</label>
+					<help>Open Animation File</help>
+				</object>
+				<object class="wxMenuItem" name="wxID_SAVEAS">
+					<label>Save Animation _As...\tCtrl-S</label>
+					<help>Save animation as</help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="wxID_EXIT">
+					<label>E_xit\tAlt-X</label>
+					<help>Exit the Application</help>
+				</object>
+			</object>
+			<object class="wxMenu" name="EditMenu">
+				<label>_Edit</label>
+				<object class="wxMenuItem" name="EditMove">
+					<label>_Move</label>
+					<help></help>
+					<checkable>1</checkable>
+				</object>
+				<object class="wxMenuItem" name="EditRotate">
+					<label>_Rotate</label>
+					<help></help>
+					<checkable>1</checkable>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="EditSetKeyframe">
+					<label>_Set Keyframe</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="EditDeleteKeyframe">
+					<label>_Delete Keyframe</label>
+					<help></help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="EditTimelineProperties">
+					<label>Timeline Propoerties...</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="PlayMenu">
+				<label>_Play</label>
+				<object class="wxMenuItem" name="PlayPlay">
+					<label>_Play</label>
+					<help>Play the animation</help>
+				</object>
+				<object class="wxMenuItem" name="PlayPlayFromBeginning">
+					<label>Play from _Beginning</label>
+					<help>Play from the beginning</help>
+				</object>
+				<object class="wxMenuItem" name="PlayStop">
+					<label>_Stop</label>
+					<help>Stop playing</help>
+				</object>
+			</object>
+			<object class="wxMenu" name="HelpMenu">
+				<label>_Help</label>
+				<object class="wxMenuItem" name="wxID_ABOUT">
+					<label>_About\tF1</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="MachineMenu">
+				<label>_Change Machine</label>
+				<object class="wxMenuItem" name="SwapMachine1">
+					<label>_SwapMachineOne</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="SwapMachine2">
+					<label>_SwapMachineTwo</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="MachineFrameSet">
+				<label>_Set Machine Frames</label>
+				<object class="wxMenuItem" name="SetMachineFrames">
+					<label>_Set Frames</label>
+					<help></help>
+				</object>
+			</object>
+		</object>
+		<object class="wxToolBar" name="ToolBar">
+			<style>wxTB_HORIZONTAL</style>
+			<bitmapsize>32,32</bitmapsize>
+			<margins></margins>
+			<packing>1</packing>
+			<separation>5</separation>
+			<object class="tool" name="EditMove">
+				<label>Move</label>
+				<tooltip>Move Actor Parts</tooltip>
+				<longhelp></longhelp>
+				<bitmap>move32.png</bitmap>
+				<toggle>1</toggle>
+			</object>
+			<object class="tool" name="EditRotate">
+				<label>Rotate</label>
+				<tooltip>Rotate Actor Parts</tooltip>
+				<longhelp></longhelp>
+				<bitmap>rotate32.png</bitmap>
+				<toggle>1</toggle>
+			</object>
+			<object class="separator" />
+			<object class="tool" name="EditSetKeyframe">
+				<label>tool</label>
+				<tooltip></tooltip>
+				<longhelp></longhelp>
+				<bitmap>record32.png</bitmap>
+			</object>
+			<object class="tool" name="EditDeleteKeyframe">
+				<label>tool</label>
+				<tooltip></tooltip>
+				<longhelp></longhelp>
+				<bitmap>delete32.png</bitmap>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="StatusBar">
+			<style>wxSTB_SIZEGRIP</style>
+			<fields>1</fields>
+		</object>
+	</object>
+	<object class="wxDialog" name="AboutDialog">
+		<style>wxDEFAULT_DIALOG_STYLE</style>
+		<title>About Canadian Experience</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL</flag>
+				<border>5</border>
+				<object class="wxStaticBitmap" name="m_bitmap1">
+					<bitmap>about-image.jpg</bitmap>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxStaticText" name="m_staticText1">
+					<style>wxALIGN_CENTER_HORIZONTAL</style>
+					<label>The Canadian Experience</label>
+					<wrap>-1</wrap>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+				<border>5</border>
+				<object class="wxButton" name="wxID_OK">
+					<label>Ok</label>
+					<default>0</default>
+					<auth_needed>0</auth_needed>
+					<markup>0</markup>
+					<bitmap />
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="TimelineDlg">
+		<style>wxDEFAULT_DIALOG_STYLE</style>
+		<title>Timeline Parameters</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxGridSizer">
+					<rows>2</rows>
+					<cols>2</cols>
+					<vgap>0</vgap>
+					<hgap>0</hgap>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_VERTICAL|wxALIGN_RIGHT|wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_staticText2">
+							<label>Number of frames:</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_VERTICAL|wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxTextCtrl" name="TimelineDlgNumFrames">
+							<value></value>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_VERTICAL|wxALIGN_RIGHT|wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_staticText3">
+							<label>Frame Rate:</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxTextCtrl" name="TimelineDlgFrameRate">
+							<value></value>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxStdDialogButtonSizer">
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_OK">
+							<label>&amp;OK</label>
+						</object>
+					</object>
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_CANCEL">
+							<label>&amp;Cancel</label>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="MachineFrameDlg">
+		<style>wxDEFAULT_DIALOG_STYLE</style>
+		<title>Set Machine Start Frames</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxGridSizer">
+					<rows>0</rows>
+					<cols>2</cols>
+					<vgap>0</vgap>
+					<hgap>0</hgap>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_VERTICAL|wxALIGN_RIGHT|wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_staticText4">
+							<label>Machine 1:</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_VERTICAL|wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxTextCtrl" name="Machine1StartFrame">
+							<value></value>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_VERTICAL|wxALIGN_RIGHT|wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_staticText5">
+							<label>Machine 2:</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_VERTICAL|wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxTextCtrl" name="Machine2StartFrame">
+							<value></value>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxStdDialogButtonSizer">
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_OK">
+							<label>&amp;OK</label>
+						</object>
+					</object>
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_CANCEL">
+							<label>&amp;Cancel</label>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>
